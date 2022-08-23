@@ -5,7 +5,12 @@ let calculate=(number) =>{
 }
 
 function clearField() {
-    display.value = '';
+    location.reload();
+}
+
+function removeItem() {
+    let display = document.getElementById('space').value;
+    document.getElementById('space').value=display.substring(0,display.length-1);
 }
 
 function add(a, b) {
@@ -22,4 +27,8 @@ function multiply(a, b) {
 
 function divide(a, b) {
     return a / b;
+}
+
+function operate() {
+    let result = 0;
 }

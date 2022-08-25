@@ -43,3 +43,35 @@ function operate(num1, num2, operator) {
     }
 }
 
+let storedNumber = '';
+let clickedOperator = '';
+let firstNumber = '';
+let result = '';
+currentOperand.textContent = 0;
+
+numberButton.forEach((number) => {
+    number.addEventListener('click', function() {
+        storedNumber += number.value;
+        currentOperand.textContent = storedNumber;
+    })
+})
+
+operatorButton.forEach((operator => {
+    operator.addEventListener('click', function() {
+        if (firstNumber && storedNumber) {
+            displayResult();
+        }
+        firstNumber = storedNumber;
+        clickedOperator = operator.textContent;
+        previousOperand.textContent = storedNumber + clickedOperator;
+        storedNumber = '';
+    })
+}))
+
+equalsKey.addEventListener('click', function() {
+    displayResult();
+})
+
+function displayResult() {
+    result = operate(parseFloat(firstNumber), parseFloat(storedNumber), clickedOperator)
+}

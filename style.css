@@ -4,10 +4,12 @@ body{
     box-sizing: border-box;
     outline: none;
     background-color: mediumaquamarine;
+    overflow: hidden;
 }
 
 .container {
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,10 +27,10 @@ body{
     color: inherit;
 }
 
-#space {
+.calculator-display {
     grid-column: span 4;
-    height: 70px;
-    width: 260px;
+    height: 150px;
+    width: 263px;
     box-shadow: inset 5px 5px 10px gray;
     border: none;
     background-color: snow;
@@ -38,6 +40,8 @@ body{
     font-size: 40px;
     font-weight: bolder;
     font-family: Roboto;
+    line-height: 80px;
+
 }
 
 button {
@@ -54,7 +58,7 @@ button {
     transition-duration: 0.4s;
 }
 
-.equal {
+.equals-key {
     width: 120px;
     border-radius: 42px;
 }

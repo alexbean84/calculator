@@ -7,6 +7,7 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="calculator-icon.png">
 </head>
 <body>
     <div class="container">
@@ -16,9 +17,9 @@
                 <div class="current-operand"></div>
             </div>
 
-            <button class="two-cols clear" >C</button>
-            <button class="delete">DEL</button>
-            <button class="powered" onclick="powered()">I/O</button>
+            <button class="two-cols clear" onclick="removeItem()">C</button>
+            <button class="delete" onclick="output()">🔋</button>
+            <button class="powered" onclick="powered()">RES</button>
             <button class="operator">/</button>
             <button class="number" value="7">7</button>
             <button class="number" value="8">8</button>

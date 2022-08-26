@@ -65,6 +65,8 @@ operatorButton.forEach((operator => {
         clickedOperator = operator.textContent;
         previousOperand.textContent = storedNumber + clickedOperator;
         storedNumber = '';
+        console.log('FirstNumber' + firstNumber + 'Stored' + storedNumber);
+        console.log(clickedOperator);
     })
 }))
 
@@ -73,5 +75,23 @@ equalsKey.addEventListener('click', function() {
 })
 
 function displayResult() {
-    result = operate(parseFloat(firstNumber), parseFloat(storedNumber), clickedOperator)
+    result = operate(parseFloat(firstNumber), parseFloat(storedNumber), clickedOperator);
+    currentOperand.textContent = result;
+    previousOperand.textContent = firstNumber + ' ' + clickedOperator + ' ' + storedNumber;
+    storedNumber = result;
+    console.log('FirstNumber' + firstNumber + 'Stored' + storedNumber); 
+}
+
+let display = document.querySelector('.calculator-display');
+
+function removeItem() {
+    currentOperand.textContent = '0';
+    previousOperand.textContent = '';
+    firstNumber = '';
+    storedNumber = '';
+    result = null
+}
+
+function output() {
+    alert('Battery: 40%');
 }

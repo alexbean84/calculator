@@ -1,19 +1,15 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     outline: none;
     background-color: mediumaquamarine;
     overflow: hidden;
-}
-
-.container {
-    height: 100vh;
-    width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: mediumaquamarine;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
 .calculator {
@@ -25,6 +21,10 @@ body{
     background-color: honeydew;
     color: black;
     color: inherit;
+    max-width: 30vw;
+    max-height: 80vh;
+    overflow: hidden;
+    margin-top: 150px;
 }
 
 .calculator-display {
@@ -41,6 +41,9 @@ body{
     font-weight: bolder;
     font-family: Roboto;
     line-height: 80px;
+    overflow: hidden;
+    max-width: 30vw;
+    max-height: 30vh;
 
 }
 
@@ -67,4 +70,13 @@ button:hover {
     cursor: pointer;
     background-color: aqua;
     border-color: aqua;
+}
+
+img {
+    transition: transform 0.7s ease-in-out;
+    margin-top: 128px;
+}
+
+img:hover {
+    transform: rotate(360deg);
 }
